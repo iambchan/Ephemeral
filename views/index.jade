@@ -1,17 +1,19 @@
 html
   head
     title #{title} - Ephemeral
-    link(rel='stylesheet', href='/public/css/bootstrap.css')
+    link(rel='stylesheet', type='text/css', href='/public/css/bootstrap.css')
+    link(rel='stylesheet', href='text/css', href='/public/css/site.css')
+    link(rel='text/css', type='text/css', href='http://fonts.googleapis.com/css?family=Bilbo+Swash+Caps')
   body
 
     div(class='container')
       div(class='row')
-        div(class='col-md-offset-3 col-md-6')
+        div(class='col-md-offset-3 col-md-6', style='z-index: 100')
           h1 Ephemeral
-          p Send a message to yourself, a friend, or loved one in the   future and we'll send you the message in the specified time - whether it be a month or year. 
-          
       div(class='row')
-        div(class='col-md-offset-3 col-md-6')
+        div(class='col-md-offset-3 col-md-6 well')
+          h4 Send a message to yourself, a friend, or loved one in the future and we'll send you the message in the specified time - whether it be a month or year.
+          <hr>
           form(action='/message', method='POST')
             div(class='form-group')
               label(for='recipient') Recipient Email Address
@@ -22,7 +24,8 @@ html
             div(class='form-group')
               label(for='send_date') Send Date
               input(type='date', name='send_date')
-            
+
             button(type='submit',class='btn btn-default') Submit
-            
-              
+      div(class='row')
+          div(class='col-md-offset-3 col-md-6') Made by Bess & Ray
+
