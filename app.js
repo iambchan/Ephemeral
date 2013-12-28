@@ -42,8 +42,8 @@ app.get('/:message_id', function(req, res){
   
   models.Ephemeral.findById(id, function (err, ephemeral) {
       res.render('ephemeral', ephemeral);
-    
       //delete message on server
+      if(!!ephemeral) ephemeral.remove();
   });
 
 });
