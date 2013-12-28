@@ -7,7 +7,7 @@ var app = express();
 app.use(express.bodyParser());
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
-  
+
 app.use('/public', express.static(__dirname + '/public'));
 
 
@@ -18,15 +18,15 @@ app.get('/', function(req, res){
   //res.send('Template for writing a message here');
 });
 
-app.post('/message', function(req, res){ 
-  console.log(req.params); 
-  
+app.post('/message', function(req, res){
+  console.log(req.params);
+
   var message = {
       "message_id": mongoose.Schema.Types.ObjectId,
       "content": req.body.content,
       "recipient": req.body.recipient,
       "send_date": req.body.send_date,
-      "create_date": req.body.create_date  
+      "create_date": req.body.create_date
     };
   
   var new_message = new models.Ephemeral(message);  
@@ -42,8 +42,8 @@ app.post('/message', function(req, res){
 app.get('/:message_id', function(req, res){
   // get message from server/database
   var message_id = req.params.message_id;
-  res.send(message_id);  
-  
+  res.send(message_id);
+
   // load message content
   // delete message on server
 });
