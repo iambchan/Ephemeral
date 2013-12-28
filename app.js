@@ -12,17 +12,13 @@ app.use('/public', express.static(__dirname + '/public'));
 
 
 app.get('/', function(req, res){
-  res.render('index',
-  { title : 'Home' }
-  )
-  //res.send('Template for writing a message here');
+  res.render('index')
 });
 
 app.post('/message', function(req, res){
   console.log(req.params);
 
   var message = {
-      "message_id": mongoose.Schema.Types.ObjectId,
       "content": req.body.content,
       "recipient": req.body.recipient,
       "send_date": req.body.send_date,
@@ -39,13 +35,17 @@ app.post('/message', function(req, res){
 });
 
 
+
 app.get('/:message_id', function(req, res){
   // get message from server/database
-  var message_id = req.params.message_id;
-  res.send(message_id);
+  var id = req.params.message_id;
+  
+  models.Ephemeral.findById(id, function (err, ephemeral) {
+      res.render('ephemeral', ephemeral);
+    
+      //delete message on server
+  });
 
-  // load message content
-  // delete message on server
 });
 
 
