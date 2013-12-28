@@ -2,7 +2,11 @@ var express = require('express');
 var mongoose = require('mongoose');
 
 //configure dependencies
-mongoose.connect(process.env.DB_URL || 'mongodb://localhost/test');
+var MONGO_URL = process.env.MONGOLAB_URI ||
+  process.env.MONGOHQ_URL ||
+  'mongodb://localhost/test';
+
+mongoose.connect(MONGO_URL);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {
