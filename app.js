@@ -6,6 +6,8 @@ var MONGO_URL = process.env.MONGOLAB_URI ||
   process.env.MONGOHQ_URL ||
   'mongodb://localhost/test';
 
+var PORT = process.env.PORT || 3000;
+
 mongoose.connect(MONGO_URL);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -66,5 +68,5 @@ app.get('/:message_id', function(req, res){
 
 
 
-app.listen(3000);
-console.log('Listening on port 3000');
+app.listen(PORT);
+console.log('Listening on port ' + PORT);
