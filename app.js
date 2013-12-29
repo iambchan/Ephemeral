@@ -47,11 +47,13 @@ app.post('/message', function(req, res){
   if (err) // TODO handle the error
     console.log("error saving message to db");
   });
-  //TODO: redirect to message success
-  res.json(message);
+  res.redirect('/success');
 });
 
-
+app.get('/success', function(req, res){
+  res.render('success');
+});
+ 
 app.get('/:message_id', function(req, res){
   // get message from server/database
   var id = req.params.message_id;
@@ -64,6 +66,6 @@ app.get('/:message_id', function(req, res){
 
 });
 
-
+       
 app.listen(PORT);
 console.log('Listening on port ' + PORT);
