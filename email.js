@@ -12,7 +12,7 @@ var smtpTransport = nodemailer.createTransport("SMTP",{
 });
 
 exports.sendMail = function(ephemeral) {  
-  var link = "http://afternoon-river-2798.herokuapp.com/" + ephemeral._id;
+  var link = "http://ephemeral-messages.herokuapp.com/" + ephemeral._id;
   var options = { link: link };
   var jade_html = jade.renderFile(__dirname + '/views/email.jade', options);
   
