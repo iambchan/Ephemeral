@@ -1,6 +1,7 @@
 var express = require('express');
 var mongoose = require('mongoose');
 
+
 //configure dependencies
 var MONGO_URL = process.env.MONGOLAB_URI ||
   process.env.MONGOHQ_URL ||
@@ -15,7 +16,8 @@ db.once('open', function callback () {
   // yay!
 });
 
-models = require('./models').init(mongoose)
+var models = require('./models').init(mongoose)
+require('./scheduler').init(models);
 
 // Configure express.js
 var app = express();
@@ -37,16 +39,15 @@ app.post('/message', function(req, res){
   var message = {
       "content": req.body.content,
       "recipient": req.body.recipient,
-      "send_date": req.body.send_date,
-      "create_date": req.body.create_date
+      "send_date": req.body.send_date
     };
 
   var new_message = new models.Ephemeral(message);
   new_message.save(function (err, new_message) {
   if (err) // TODO handle the error
     console.log("error saving message to db");
-});
-
+  });
+  //TODO: redirect to message success
   res.json(message);
 });
 

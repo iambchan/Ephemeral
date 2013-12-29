@@ -5,7 +5,7 @@ exports.init = function(mongoose) {
         recipient: String,
         content: String,
         send_date: { type: Date },
-        create_date: { type: Date, default: Date.now }
+        create_date: { type: Date, default: Date.now() }
     });
 
     return {
