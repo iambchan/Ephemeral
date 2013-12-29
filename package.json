@@ -6,6 +6,8 @@
   "dependencies": {
     "express": "3.x",
     "jade": "*",
-    "mongoose": "*"
+    "mongoose": "*",
+    "nodemailer": "*",
+    "node-schedule": "*"
   }
 }

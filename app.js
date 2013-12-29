@@ -51,7 +51,6 @@ app.post('/message', function(req, res){
 });
 
 
-
 app.get('/:message_id', function(req, res){
   // get message from server/database
   var id = req.params.message_id;
@@ -63,9 +62,6 @@ app.get('/:message_id', function(req, res){
   });
 
 });
-
-
-
 
 
 app.listen(PORT);
