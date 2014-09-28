@@ -7,7 +7,7 @@
     "express": "3.x",
     "jade": "*",
     "mongoose": "*",
-    "nodemailer": "*",
+    "nodemailer": "1.0",
     "node-schedule": "*"
   }
 }

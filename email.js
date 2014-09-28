@@ -3,7 +3,7 @@ var jade = require('jade')
 
 // configure email
 // create reusable transport method (opens pool of SMTP connections)
-var smtpTransport = nodemailer.createTransport("SMTP",{
+var smtpTransport = nodemailer.createTransport({
     service: "Gmail",
     auth: {
         user: process.env.EMAIL_USER,
@@ -28,7 +28,6 @@ exports.sendMail = function(ephemeral) {
     if(error) console.log(error);
     else console.log("Message sent: " + response.message);
   
-    smtpTransport.close(); 
   });
    
 };
