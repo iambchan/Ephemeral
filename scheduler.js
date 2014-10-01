@@ -4,7 +4,6 @@ var schedule = require("node-schedule");
 
 exports.init = function(models) {
   var rule = new schedule.RecurrenceRule();
-  rule.hour = 4;
   
   var j = schedule.scheduleJob(rule, function(){
     console.log("running email scheduler");

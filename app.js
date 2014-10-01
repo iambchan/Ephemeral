@@ -16,7 +16,9 @@ db.once('open', function callback () {
   // yay!
 });
 
-var models = require('./models').init(mongoose)
+//TODO: change variable
+var echan = require('./models')
+var models = echan.init(mongoose)
 require('./scheduler').init(models);
 
 // Configure express.js
@@ -39,7 +41,8 @@ app.post('/message', function(req, res){
   var message = {
       "content": req.body.content,
       "recipient": req.body.recipient,
-      "send_date": req.body.send_date
+      "send_date": req.body.send_date,
+      "from_user": req.body.from_user
     };
 
   var new_message = new models.Ephemeral(message);
@@ -58,12 +61,14 @@ app.get('/:message_id', function(req, res){
   // get message from server/database
   var id = req.params.message_id;
 
-  models.Ephemeral.findById(id, function (err, ephemeral) {
-      res.render('ephemeral', ephemeral);
-      //delete message on server
-      if(!!ephemeral) ephemeral.remove();
-  });
-
+  function onSuccess(ephemeral) {
+    res.render('ephemeral', ephemeral)
+  }
+  function onFailure(err) {
+    console.log(err);
+  }
+  echan.readEphemeral(models, id, onSuccess, onFailure);
+  //eechan.readEphemeral(models, id, onSuccess, onFailure);
 });
 
        
