@@ -3,8 +3,31 @@ function ReadEphemeral(db, itemId, onSuccess, onFailure) {
         if(err) {
             onFailure(err);
         } else {
+           RemoveEphemeral(db, ephemeral, onSuccess, onFailure);
+        }
+    });
+}
+
+// Gets the ephemeral given the itemId and returns the found ephemeral
+function GetEphemeral(db, itemId, onSuccess, onFailure) {
+    db.Ephemeral.findById(itemId, function (err, ephemeral) {
+        if(err) {
+            onFailure(err);
+        } else {
             onSuccess(ephemeral);
-            db.Ephemeral.remove({"_id": ephemeral._id}); 
+        }
+    });
+}
+
+// removes ephemeral, parameter - ephemeral
+function RemoveEphemeral(db, ephemeral) {
+    console.log(ephemeral);
+    db.Ephemeral.remove({"_id": ephemeral._id}, function(err) {
+        if(err) {
+            console.log(err);
+        }
+        else {
+            console.log("successfully removed ephemeral");
         }
     });
 }
@@ -28,3 +51,5 @@ exports.init = function(mongoose) {
 
 // reads ephemeral and removes it
 exports.readEphemeral = ReadEphemeral;
+exports.getEphemeral = GetEphemeral;
+exports.removeEphemeral = RemoveEphemeral;

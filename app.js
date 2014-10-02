@@ -16,9 +16,8 @@ db.once('open', function callback () {
   // yay!
 });
 
-//TODO: change variable
-var echan = require('./models')
-var models = echan.init(mongoose)
+var ephemeralDB = require('./models')
+var models = ephemeralDB.init(mongoose)
 require('./scheduler').init(models);
 
 // Configure express.js
@@ -62,13 +61,16 @@ app.get('/:message_id', function(req, res){
   var id = req.params.message_id;
 
   function onSuccess(ephemeral) {
-    res.render('ephemeral', ephemeral)
+    res.render('ephemeral', ephemeral);
+    // remove the ephemeral
+    if(!!ephemeral) {
+         ephemeralDB.removeEphemeral(models, ephemeral);      
+    }
   }
   function onFailure(err) {
     console.log(err);
   }
-  echan.readEphemeral(models, id, onSuccess, onFailure);
-  //eechan.readEphemeral(models, id, onSuccess, onFailure);
+  ephemeralDB.getEphemeral(models, id, onSuccess, onFailure);
 });
 
        

@@ -12,7 +12,16 @@ var smtpTransport = nodemailer.createTransport({
 });
 
 exports.sendMail = function(ephemeral) {  
-  var link = "http://ephemeral-messages.herokuapp.com/" + ephemeral._id;
+  //var link = "http://ephemeral-messages.herokuapp.com/" + ephemeral._id;
+  console.log("in sendMail Method");
+  var environmentLink;
+  if(process.env.PORT) {
+    environmentLink = "http://ephemeral-messages.herokuapp.com/";
+  }
+  else {
+    environmentLink = "http://localhost:3000/";
+  }
+  var link = environmentLink + ephemeral._id;
   var options = { link: link };
   var jade_html = jade.renderFile(__dirname + '/views/email.jade', options);
   
@@ -27,7 +36,6 @@ exports.sendMail = function(ephemeral) {
   smtpTransport.sendMail(mailOptions, function(error, response){
     if(error) console.log(error);
     else console.log("Message sent: " + response.message);
-  
   });
    
 };

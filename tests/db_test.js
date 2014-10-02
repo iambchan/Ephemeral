@@ -34,21 +34,16 @@ new_message.save(function (err, new_message) {
 	echan.readEphemeral(models, new_message._id, onSuccess, onFailure);
 });
 
-function onSuccess(ephemeral) {
+function onSuccess() {
   	// check if the ephemeral was deleted
-  	console.log(ephemeral);
-  	models.Ephemeral.find({"_id" : ephemeral._id}, function(err) {
-  		if(err) {
-  			console.log(err);
-  		}
-  	});
-  	console.log("successfully read and deleted ephemeral");
-  	mongoose.disconnect();
+  	console.log("ephemeral deleted");
+  	return true;
 }
 
 function onFailure(err) {
   	console.log("failed to read and delete ephemeral")
   	console.log(err);
+  	return false;
 }
 
 
