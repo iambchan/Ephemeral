@@ -31,7 +31,8 @@ var new_message = new models.Ephemeral(message);
 
 new_message.save(function (err, new_message) {
 	console.log("Saved new message");
-	echan.readEphemeral(models, new_message._id, onSuccess, onFailure);
+	echan.updateEmailSentFlag(models, new_message);
+	//echan.readEphemeral(models, new_message._id, onSuccess, onFailure);
 });
 
 function onSuccess() {

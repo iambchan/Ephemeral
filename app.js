@@ -18,7 +18,7 @@ db.once('open', function callback () {
 
 var ephemeralDB = require('./models')
 var models = ephemeralDB.init(mongoose)
-require('./scheduler').init(models);
+require('./scheduler').init(ephemeralDB, models);
 
 // Configure express.js
 var app = express();
@@ -41,7 +41,7 @@ app.post('/message', function(req, res){
       "content": req.body.content,
       "recipient": req.body.recipient,
       "send_date": req.body.send_date,
-      "from_user": req.body.from_user
+      "from_user": req.body.from_user 
     };
 
   var new_message = new models.Ephemeral(message);

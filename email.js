@@ -11,9 +11,11 @@ var smtpTransport = nodemailer.createTransport({
     }
 });
 
-exports.sendMail = function(ephemeral) {  
+exports.sendMail = function(ephemeralDB, models, ephemeral) {  
   //var link = "http://ephemeral-messages.herokuapp.com/" + ephemeral._id;
   console.log("in sendMail Method");
+
+  // set the link to ephemeral depending on environment (test or prod)
   var environmentLink;
   if(process.env.PORT) {
     environmentLink = "http://ephemeral-messages.herokuapp.com/";
@@ -35,7 +37,11 @@ exports.sendMail = function(ephemeral) {
   // send mail with defined transport object
   smtpTransport.sendMail(mailOptions, function(error, response){
     if(error) console.log(error);
-    else console.log("Message sent: " + response.message);
+    else {
+      console.log("Message sent: " + response.message);
+      //update email_sent flag in the database so we don't send it again.
+      ephemeralDB.updateEmailSentFlag(models, ephemeral);
+    }
   });
    
 };

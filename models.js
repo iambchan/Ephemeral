@@ -32,6 +32,17 @@ function RemoveEphemeral(db, ephemeral) {
     });
 }
 
+function UpdateEmailSentFlag(db, ephemeral) {
+    console.log(ephemeral);
+    ephemeral.email_sent = "true";
+    ephemeral.save(function (err, new_message) {
+    if (err) {
+        console.log("error updating email sent flag");
+        console.log(err);
+    }
+  });
+}
+
 exports.init = function(mongoose) {
 
     var ephemeralSchema = mongoose.Schema({
@@ -40,7 +51,8 @@ exports.init = function(mongoose) {
         content: String,
         from_user: String,
         send_date: { type: Date },
-        create_date: { type: Date, default: Date.now() }
+        create_date: { type: Date, default: Date.now() },
+        email_sent: { type: Boolean, default: false }
     });
 
     return {
@@ -53,3 +65,4 @@ exports.init = function(mongoose) {
 exports.readEphemeral = ReadEphemeral;
 exports.getEphemeral = GetEphemeral;
 exports.removeEphemeral = RemoveEphemeral;
+exports.updateEmailSentFlag = UpdateEmailSentFlag;
