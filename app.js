@@ -13,7 +13,7 @@ mongoose.connect(MONGO_URL);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {
-  // yay!
+  console.log("Connected to database.")
 });
 
 var ephemeralDB = require('./models')
@@ -29,9 +29,21 @@ app.set('view engine', 'jade');
 
 app.use('/public', express.static(__dirname + '/public'));
 
+function onFailure(err) {
+  console.log(err);
+}
 
 app.get('/', function(req, res){
-  res.render('index')
+  var sent = 0;
+  var unsent = 0;
+  // Get the number of sent and unsent ephemerals in the server for stats 
+  ephemeralDB.getNumSentEphemerals(models, function(numEphemerals){
+    sent = numEphemerals;
+    ephemeralDB.getNumUnsentEphemerals(models, function(numUnsentEphemerals){
+      unsent = numUnsentEphemerals;
+      res.render('index', {unsent_ephemerals: unsent, sent_ephemerals: sent});
+    }, onFailure);
+  }, onFailure);  
 });
 
 app.post('/message', function(req, res){
@@ -55,6 +67,10 @@ app.post('/message', function(req, res){
 app.get('/success', function(req, res){
   res.render('success');
 });
+
+app.get('/ephemeral_stats', function(req, res){
+  res.render('ephemeralStats');
+});
  
 app.get('/:message_id', function(req, res){
   // get message from server/database
@@ -62,7 +78,7 @@ app.get('/:message_id', function(req, res){
 
   function onSuccess(ephemeral) {
     if(!ephemeral) {
-      res.status(404);    
+      res.status(404);         
     }
     res.render('ephemeral', ephemeral);
 

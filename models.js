@@ -41,7 +41,7 @@ function UpdateEmailSentFlag(db, ephemeral, onSuccess) {
         console.log(err);
     }
     else {
-        onSuccess(new_message);
+        !!onSuccess && onSuccess(new_message);
     }
   });
 }
