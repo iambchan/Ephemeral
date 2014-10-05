@@ -5,9 +5,10 @@ html(lang="en")
     link(rel='stylesheet', type='text/css', href='/public/css/bootstrap.css')
     link(rel='stylesheet', href='/public/css/site.css')
     link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Bilbo+Swash+Caps')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='/public/js/client.js')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
   body
-
     div(class='container')
       div(class='row')
         div(class='col-md-offset-3 col-md-6', style='z-index: 100')
@@ -16,5 +17,6 @@ html(lang="en")
         div(class='col-md-offset-3 col-md-6 well')
           block content
       div(class='row')
-          div(class='col-md-offset-3 col-md-6') Made by Bess & Ray
-
+          div(class='col-xs-12 col-sm-6 col-md-8') Made by Bess & Ray
+          div(class='col-md-6') 
+          include ephemeralStats

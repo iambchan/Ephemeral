@@ -32,7 +32,7 @@ function RemoveEphemeral(db, ephemeral) {
     });
 }
 
-function UpdateEmailSentFlag(db, ephemeral) {
+function UpdateEmailSentFlag(db, ephemeral, onSuccess) {
     console.log(ephemeral);
     ephemeral.email_sent = "true";
     ephemeral.save(function (err, new_message) {
@@ -40,11 +40,37 @@ function UpdateEmailSentFlag(db, ephemeral) {
         console.log("error updating email sent flag");
         console.log(err);
     }
+    else {
+        onSuccess(new_message);
+    }
   });
 }
 
-exports.init = function(mongoose) {
+// Gets number of future ephemerals (notification email not sent yet)
+function GetNumUnsentEphemerals(db, onSuccess, onFailure) {
+    db.Ephemeral.find({"email_sent": false}, function(err, ephemerals){
+        if(err) {
+            onFailure(err);
+        }
+        else {
+            onSuccess(ephemerals.length);
+        }
+    });
+}
 
+// Get number of ephemerals waiting to be read
+function GetNumSentEphemerals(db, onSuccess, onFailure) {
+    db.Ephemeral.find({"email_sent": true}, function(err, ephemerals){
+        if(err) {
+            onFailure(err);
+        }
+        else {
+            onSuccess(ephemerals.length);
+        }
+    });
+}
+
+exports.init = function(mongoose) {
     var ephemeralSchema = mongoose.Schema({
         message_id: String,
         recipient: String,
@@ -61,8 +87,9 @@ exports.init = function(mongoose) {
     };
 }
 
-// reads ephemeral and removes it
 exports.readEphemeral = ReadEphemeral;
 exports.getEphemeral = GetEphemeral;
 exports.removeEphemeral = RemoveEphemeral;
 exports.updateEmailSentFlag = UpdateEmailSentFlag;
+exports.getNumSentEphemerals = GetNumSentEphemerals;
+exports.getNumUnsentEphemerals = GetNumUnsentEphemerals;

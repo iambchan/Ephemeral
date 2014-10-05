@@ -61,10 +61,14 @@ app.get('/:message_id', function(req, res){
   var id = req.params.message_id;
 
   function onSuccess(ephemeral) {
+    if(!ephemeral) {
+      res.status(404);    
+    }
     res.render('ephemeral', ephemeral);
+
     // remove the ephemeral
     if(!!ephemeral) {
-         ephemeralDB.removeEphemeral(models, ephemeral);      
+      ephemeralDB.removeEphemeral(models, ephemeral);      
     }
   }
   function onFailure(err) {
