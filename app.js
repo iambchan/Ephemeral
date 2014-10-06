@@ -1,6 +1,6 @@
 var express = require('express');
 var mongoose = require('mongoose');
-
+var Q = require('q');
 
 //configure dependencies
 var MONGO_URL = process.env.MONGOLAB_URI ||
@@ -27,6 +27,20 @@ app.use(express.bodyParser());
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 
+// adds user count to the request object
+app.use(function(req, res, next) {
+  var numSent = Q.defer();
+  var numUnsent = Q.defer();
+
+  ephemeralDB.getNumSentEphemerals(models, numSent.resolve);
+  ephemeralDB.getNumUnsentEphemerals(models, numUnsent.resolve);
+
+  Q.all([numSent.promise, numUnsent.promise]).then(function(counts) {
+    app.locals.counts = {sent: counts[0], unsent: counts[1]};
+    next();
+  });
+});
+
 app.use('/public', express.static(__dirname + '/public'));
 
 function onFailure(err) {
@@ -34,16 +48,8 @@ function onFailure(err) {
 }
 
 app.get('/', function(req, res){
-  var sent = 0;
-  var unsent = 0;
   // Get the number of sent and unsent ephemerals in the server for stats 
-  ephemeralDB.getNumSentEphemerals(models, function(numEphemerals){
-    sent = numEphemerals;
-    ephemeralDB.getNumUnsentEphemerals(models, function(numUnsentEphemerals){
-      unsent = numUnsentEphemerals;
-      res.render('index', {unsent_ephemerals: unsent, sent_ephemerals: sent});
-    }, onFailure);
-  }, onFailure);  
+  res.render('index', {});
 });
 
 app.post('/message', function(req, res){
