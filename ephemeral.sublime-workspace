@@ -1,0 +1,2252 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"numUnsen",
+				"numUnsentEphemerals"
+			],
+			[
+				"e",
+				"ephemeralStats"
+			],
+			[
+				"env",
+				"environmentLink"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/bessiechan/Misc/Blog/settingUp",
+			"settings":
+			{
+				"buffer_size": 4621,
+				"line_ending": "Unix",
+				"name": "heroku"
+			}
+		},
+		{
+			"contents": "Terminal stuff\n\nTools: iterm2, zshrc\n\nUseful terminal keyboard shortcuts to remember\npbcopy\npbpaste\ncd -2\nctrl -- click on links\n\nzshell\nfile:///Users/bessiechan/.zshrc\n\n",
+			"file": "/Users/bessiechan/Misc/Blog/TerminalNotes",
+			"file_size": 236,
+			"file_write_time": 130568714040000000,
+			"settings":
+			{
+				"buffer_size": 170,
+				"line_ending": "Unix",
+				"name": "Terminal stuff"
+			}
+		},
+		{
+			"file": "tests/db_test.js",
+			"settings":
+			{
+				"buffer_size": 1502,
+				"line_ending": "Unix",
+				"name": "// Create the model"
+			}
+		},
+		{
+			"contents": "Mongo \n\nHow to use mongo in terminal\n> mongo\n> use test\n> show collections\n> db.ephemerals.find()\n> db.ephemerals.remove({})\n\nMake sure you're running something on local host.. the instance of mongo is running locally.\n\nneed to also start up mongo server??:\nsudo mongod",
+			"settings":
+			{
+				"buffer_size": 269,
+				"line_ending": "Unix",
+				"name": "Mongo"
+			}
+		},
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 2597,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/success.jade",
+			"settings":
+			{
+				"buffer_size": 164,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/index.jade",
+			"settings":
+			{
+				"buffer_size": 837,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/template.jade",
+			"settings":
+			{
+				"buffer_size": 919,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/ephemeral.jade",
+			"settings":
+			{
+				"buffer_size": 148,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/ephemeralStats.jade",
+			"settings":
+			{
+				"buffer_size": 47,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/client.js",
+			"settings":
+			{
+				"buffer_size": 305,
+				"line_ending": "Unix",
+				"name": "Date.prototype.toDateInputValue = (function() {"
+			}
+		},
+		{
+			"file": "email.js",
+			"settings":
+			{
+				"buffer_size": 1500,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scheduler.js",
+			"settings":
+			{
+				"buffer_size": 662,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Procfile",
+			"settings":
+			{
+				"buffer_size": 17,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "plans.todo",
+			"settings":
+			{
+				"buffer_size": 1481,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/error.jade",
+			"settings":
+			{
+				"buffer_size": 59,
+				"line_ending": "Unix",
+				"name": "extend template"
+			}
+		},
+		{
+			"file": "/Users/bessiechan/Library/Application Support/Sublime Text 3/Packages/PlainTasks/messages/Tutorial.todo",
+			"settings":
+			{
+				"buffer_size": 3396,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/bessiechan/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 237,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"selected_items":
+		[
+			[
+				"reindent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"set syntax jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"syntax jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"pack insta",
+				"Package Control: Install Package"
+			],
+			[
+				"package install",
+				"Package Control: Install Package"
+			],
+			[
+				"package instal",
+				"Package Control: Install Package"
+			],
+			[
+				"git log curre",
+				"Git: Quick Log Current File"
+			],
+			[
+				"git log",
+				"Git: Log"
+			],
+			[
+				"package remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"gitstatus",
+				"Git: Status"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"Package Control: Install Package"
+			],
+			[
+				"minimap",
+				"View: Toggle Minimap"
+			],
+			[
+				"pack instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 457.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/bessiechan/Projects/ephemeral/node_modules/express",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/express/node_modules",
+		"/Users/bessiechan/Projects/ephemeral/public/css",
+		"/Users/bessiechan/Projects/ephemeral/public/images"
+	],
+	"file_history":
+	[
+		"/Users/bessiechan/Projects/ephemeral/node_modules/.bin/jade",
+		"/Users/bessiechan/Projects/ephemeral/views/email.jade",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/express/node_modules/connect/support/docs.jade",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/mongoose/node_modules/mpromise/.idea/libraries/Node_js_Dependencies_for_mpromise.xml",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/nodemailer/.jshintrc",
+		"/Users/bessiechan/Projects/ephemeral/.gitignore",
+		"/Users/bessiechan/Projects/ephemeral/models.js",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/tap-stream/examples/tap-nested-objects.js",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/mongoose/lib/model.js",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/stream-api-pipe.js",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/express/node_modules/mkdirp/test/sync.js",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/test/win32/security_credentials_tests.js",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/wrappers/security_context.cc",
+		"/Users/bessiechan/Projects/ephemeral/plans.todo",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/express/node_modules/connect/node_modules/serve-index/public/style.css",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/express/node_modules/connect/node_modules/express-session/session/store.js",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/express/node_modules/connect/node_modules/express-session/session/session.js",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/nodemailer/node_modules/nodemailer-direct-transport/node_modules/smtp-connection/src/smtp-connection.js",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/nodemailer/node_modules/nodemailer-smtp-transport/node_modules/smtp-connection/src/smtp-connection.js",
+		"/Users/bessiechan/Projects/ephemeral/public/css/site.css",
+		"/Users/bessiechan/Projects/ephemeral/public/css/bootstrap.css",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/source-map/build/suffix-source-map.jsm",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/repl_set/repl_set_state.js",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/repl_set/strategies/statistics_strategy.js",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/mongoose/node_modules/mpromise/.idea/codeStyleSettings.xml",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/express/node_modules/connect/examples/cookieSession.js",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/mongoose/website.js",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/jade/node_modules/with/node_modules/uglify-js/node_modules/optimist/example/line_count.js",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/nodemailer/node_modules/nodemailer-smtp-transport/node_modules/nodemailer-wellknown/LICENSE",
+		"/Users/bessiechan/Misc/Blog/settingUp",
+		"/Users/bessiechan/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/express/index.js",
+		"/Users/bessiechan/Projects/ephemeral/email.js",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/source-map/test/source-map/test-api.js",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/wrappers/security_credentials.cc",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/nodemailer/node_modules/hyperquest/test/auth_opt.js",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/mongoose/examples/population/population-options.js",
+		"/Users/bessiechan/Projects/ephemeral/views/ephemeral.jade",
+		"<untitled 0>",
+		"/Users/bessiechan/Projects/ephemeral/views/index.jade",
+		"/Users/bessiechan/Projects/ephemeral/scheduler.js",
+		"/Users/bessiechan/Projects/ephemeral/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server_capabilities.js",
+		"/Users/bessiechan/Projects/ephemeral/Procfile",
+		"/Users/bessiechan/Projects/ephemeral/package.json",
+		"/Users/bessiechan/Documents/notes/to download"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"GetNumUnsent",
+			"a..use",
+			"var",
+			"☐",
+			"6",
+			"well",
+			"find",
+			"publi",
+			"echan",
+			"db"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"ephemeralDB"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 11,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/bessiechan/Misc/Blog/settingUp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4621,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4620,
+								4620
+							]
+						],
+						"settings":
+						{
+							"auto_name": "heroku",
+							"history_list_is_closing": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"native",
+									[
+										"sequence",
+										{
+											"commands":
+											[
+												[
+													"_vi_a",
+													{
+														"count": 1,
+														"mode": "mode_internal_normal"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": "\n\n\nVintag"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": "eous"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": "\n"
+													}
+												],
+												[
+													"paste",
+													null
+												],
+												[
+													"insert",
+													{
+														"characters": "s"
+													}
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"move",
+													{
+														"by": "pages",
+														"forward": true
+													}
+												],
+												[
+													"paste",
+													null
+												]
+											]
+										}
+									],
+									"mode_insert",
+									null
+								],
+								"sequence": "",
+								"xpos": 23
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 2516.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/bessiechan/Misc/Blog/TerminalNotes",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 170,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								107,
+								107
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Terminal stuff",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"native",
+									[
+										"sequence",
+										{
+											"commands":
+											[
+												[
+													"insert",
+													{
+														"characters": "de"
+													}
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												]
+											]
+										}
+									],
+									null,
+									null
+								],
+								"sequence": "",
+								"xpos": 1
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "tests/db_test.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1502,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1196,
+								1196
+							]
+						],
+						"settings":
+						{
+							"auto_name": "// Create the model",
+							"highlight_line": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"native",
+									[
+										"insert",
+										{
+											"characters": " Test"
+										}
+									],
+									null,
+									null
+								],
+								"sequence": "",
+								"xpos": 19
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 35.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 269,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								219,
+								219
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Mongo",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"native",
+									[
+										"sequence",
+										{
+											"commands":
+											[
+												[
+													"insert",
+													{
+														"characters": "\nen"
+													}
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"insert",
+													{
+														"characters": "need"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": " to"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": " also:"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": "\nmong"
+													}
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"insert",
+													{
+														"characters": "sudo"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": " mongod"
+													}
+												],
+												[
+													"move",
+													{
+														"by": "lines",
+														"forward": false
+													}
+												],
+												[
+													"move",
+													{
+														"by": "characters",
+														"forward": true
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": " start"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": " up"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": " mongo"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": " "
+													}
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"insert",
+													{
+														"characters": " server??"
+													}
+												]
+											]
+										}
+									],
+									null,
+									null
+								],
+								"sequence": "",
+								"xpos": 0
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2597,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1101,
+								1101
+							]
+						],
+						"settings":
+						{
+							"highlight_line": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"vi",
+									"dw",
+									"mode_normal",
+									null
+								],
+								"sequence": "",
+								"xpos": 23
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 463.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "views/success.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 164,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								43,
+								43
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"native",
+									[
+										"_vi_d",
+										{
+											"count": 1,
+											"mode": "mode_visual",
+											"register": "\""
+										}
+									],
+									null,
+									null
+								],
+								"sequence": "",
+								"xpos": 13
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "views/index.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 837,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								437,
+								437
+							]
+						],
+						"settings":
+						{
+							"highlight_line": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"native",
+									[
+										"sequence",
+										{
+											"commands":
+											[
+												[
+													"insert",
+													{
+														"characters": "\n\n"
+													}
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"move",
+													{
+														"by": "characters",
+														"forward": true
+													}
+												]
+											]
+										}
+									],
+									null,
+									null
+								],
+								"sequence": "",
+								"xpos": 3
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "views/template.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 919,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								880,
+								880
+							]
+						],
+						"settings":
+						{
+							"highlight_line": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"vi",
+									"dd",
+									"mode_internal_normal",
+									null
+								],
+								"sequence": "",
+								"xpos": 31
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "views/ephemeral.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								31,
+								31
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"vi",
+									"dd",
+									"mode_internal_normal",
+									null
+								],
+								"sequence": "",
+								"xpos": 1
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "views/ephemeralStats.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 47,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								47,
+								47
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"native",
+									[
+										"insert",
+										{
+											"characters": "s"
+										}
+									],
+									"mode_insert",
+									null
+								],
+								"sequence": "",
+								"xpos": 16
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "public/js/client.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 305,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								66,
+								66
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Date.prototype.toDateInputValue = (function() {",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"native",
+									[
+										"sequence",
+										{
+											"commands":
+											[
+												[
+													"_vi_a",
+													{
+														"count": 1,
+														"mode": "mode_internal_normal"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": "\n"
+													}
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"insert",
+													{
+														"characters": "D"
+													}
+												],
+												[
+													"move",
+													{
+														"by": "characters",
+														"forward": false
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": "\n"
+													}
+												],
+												[
+													"move",
+													{
+														"by": "lines",
+														"forward": false
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": "//"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": "Default"
+													}
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"insert",
+													{
+														"characters": "c"
+													}
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"insert",
+													{
+														"characters": " Time"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": " zon"
+													}
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"insert",
+													{
+														"characters": "zone"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": " "
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": "suppppor="
+													}
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"insert",
+													{
+														"characters": "ort"
+													}
+												]
+											]
+										}
+									],
+									"mode_insert",
+									null
+								],
+								"sequence": "",
+								"xpos": 46
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "email.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1500,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1476,
+								1476
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"native",
+									[
+										"sequence",
+										{
+											"commands":
+											[
+												[
+													"insert",
+													{
+														"characters": ","
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": " on"
+													}
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"insert",
+													{
+														"characters": "function"
+													}
+												],
+												[
+													"insert_snippet",
+													{
+														"contents": "($0)"
+													}
+												],
+												[
+													"move",
+													{
+														"by": "characters",
+														"forward": true
+													}
+												],
+												[
+													"move",
+													{
+														"by": "characters",
+														"forward": false
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": "err"
+													}
+												],
+												[
+													"move",
+													{
+														"by": "characters",
+														"forward": true
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": " "
+													}
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"insert",
+													{
+														"characters": " "
+													}
+												],
+												[
+													"insert_snippet",
+													{
+														"contents": "{$0}"
+													}
+												],
+												[
+													"run_macro_file",
+													{
+														"file": "res://Packages/Default/Add Line in Braces.sublime-macro"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": "if"
+													}
+												],
+												[
+													"insert_snippet",
+													{
+														"contents": "($0)"
+													}
+												],
+												[
+													"move",
+													{
+														"by": "characters",
+														"forward": true
+													}
+												],
+												[
+													"move",
+													{
+														"by": "characters",
+														"forward": false
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": "err"
+													}
+												],
+												[
+													"move",
+													{
+														"by": "characters",
+														"forward": true
+													}
+												]
+											]
+										}
+									],
+									null,
+									null
+								],
+								"sequence": "",
+								"xpos": 55
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 391.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "scheduler.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 662,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								267,
+								267
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"vi",
+									"dw",
+									"mode_normal",
+									null
+								],
+								"sequence": "",
+								"xpos": 3
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "Procfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"vintage":
+							{
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 0
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "plans.todo",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1481,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								954,
+								954
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PlainTasks/PlainTasks.tmLanguage",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"vi",
+									"dd",
+									"mode_internal_normal",
+									null
+								],
+								"sequence": "",
+								"visual_block_direction": 2,
+								"xpos": 1
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 70.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "views/error.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 59,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								59,
+								59
+							]
+						],
+						"settings":
+						{
+							"auto_name": "extend template",
+							"highlight_line": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": true,
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_insert",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"vi",
+									"dw",
+									"mode_normal",
+									null
+								],
+								"sequence": "",
+								"xpos": 0
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "/Users/bessiechan/Library/Application Support/Sublime Text 3/Packages/PlainTasks/messages/Tutorial.todo",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3396,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								704,
+								704
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PlainTasks/PlainTasks.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"vintage":
+							{
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 30
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 881.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "/Users/bessiechan/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 237,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								140,
+								140
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"native",
+									[
+										"insert",
+										{
+											"characters": "\""
+										}
+									],
+									"mode_insert",
+									null
+								],
+								"sequence": "",
+								"xpos": 4
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "email.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1500,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								225,
+								225
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"native",
+									[
+										"sequence",
+										{
+											"commands":
+											[
+												[
+													"insert",
+													{
+														"characters": ","
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": " on"
+													}
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"insert",
+													{
+														"characters": "function"
+													}
+												],
+												[
+													"insert_snippet",
+													{
+														"contents": "($0)"
+													}
+												],
+												[
+													"move",
+													{
+														"by": "characters",
+														"forward": true
+													}
+												],
+												[
+													"move",
+													{
+														"by": "characters",
+														"forward": false
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": "err"
+													}
+												],
+												[
+													"move",
+													{
+														"by": "characters",
+														"forward": true
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": " "
+													}
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"insert",
+													{
+														"characters": " "
+													}
+												],
+												[
+													"insert_snippet",
+													{
+														"contents": "{$0}"
+													}
+												],
+												[
+													"run_macro_file",
+													{
+														"file": "res://Packages/Default/Add Line in Braces.sublime-macro"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": "if"
+													}
+												],
+												[
+													"insert_snippet",
+													{
+														"contents": "($0)"
+													}
+												],
+												[
+													"move",
+													{
+														"by": "characters",
+														"forward": true
+													}
+												],
+												[
+													"move",
+													{
+														"by": "characters",
+														"forward": false
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": "err"
+													}
+												],
+												[
+													"move",
+													{
+														"by": "characters",
+														"forward": true
+													}
+												]
+											]
+										}
+									],
+									null,
+									null
+								],
+								"sequence": "",
+								"xpos": 55
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 400.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 43.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git-commit":
+	{
+		"height": 146.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 146.0
+	},
+	"project": "ephemeral.sublime-project",
+	"replace":
+	{
+		"height": 82.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"plans.",
+				"plans.todo"
+			],
+			[
+				"app.js",
+				"app.js"
+			],
+			[
+				"epherma",
+				"views/ephemeralStats.jade"
+			],
+			[
+				"ephemeralstat",
+				"views/ephemeralStats.jade"
+			],
+			[
+				"template",
+				"views/template.jade"
+			],
+			[
+				"models",
+				"models.js"
+			],
+			[
+				"tod",
+				"plans.todo"
+			],
+			[
+				"todo",
+				"plans.todo"
+			],
+			[
+				"app",
+				"app.js"
+			],
+			[
+				"ephe",
+				"views/ephemeralStats.jade"
+			],
+			[
+				"temp",
+				"views/template.jade"
+			],
+			[
+				"succe",
+				"views/success.jade"
+			],
+			[
+				"succ",
+				"views/success.jade"
+			],
+			[
+				"model",
+				"models.js"
+			],
+			[
+				"mode",
+				"models.js"
+			],
+			[
+				"em",
+				"email.js"
+			],
+			[
+				"mod",
+				"models.js"
+			],
+			[
+				"plans",
+				"plans.todo"
+			],
+			[
+				"ephemear",
+				"views/ephemeralStats.jade"
+			],
+			[
+				"templa",
+				"views/template.jade"
+			],
+			[
+				"emai",
+				"email.js"
+			],
+			[
+				"email",
+				"email.js"
+			],
+			[
+				"tempa",
+				"views/template.jade"
+			],
+			[
+				"ap",
+				"app.js"
+			],
+			[
+				"client",
+				"public/js/client.js"
+			],
+			[
+				"a",
+				"app.js"
+			],
+			[
+				"appp",
+				"node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/stream-api-pipe.js"
+			],
+			[
+				"modes",
+				"models.js"
+			],
+			[
+				"inde",
+				"views/index.jade"
+			],
+			[
+				"index",
+				"views/index.jade"
+			],
+			[
+				"app.",
+				"app.js"
+			],
+			[
+				"proc",
+				"Procfile"
+			],
+			[
+				"sche",
+				"scheduler.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"_vintageous_last_char_search_command": "vi_t",
+		"_vintageous_last_character_search": "d",
+		"_vintageous_reset_during_init": true,
+		"vintage":
+		{
+			"_cmdline_cd": "/Applications/Sublime Text.app/Contents/MacOS"
+		}
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 177.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
