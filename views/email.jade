@@ -1,6 +1,11 @@
-extend template
-block content
-  p Hello! This is a message from Ephemeral. 
-  p Click on the following link to view your message:
-  p #{link}
-  p Note: This link can only be visited once.
+doctype html
+html(lang="en")
+	head
+		link(rel='stylesheet', type='text/css', href='/public/css/bootstrap.css')
+		link(rel='stylesheet', href='/public/css/site.css')
+		link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Bilbo+Swash+Caps')
+	body
+		p Hello! This is a message from Ephemeral. 
+		p Click on the following link to view your message:
+		p #{link}
+		p Note: This link can only be visited once.

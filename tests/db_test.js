@@ -16,8 +16,8 @@ db.once('open', function callback () {
   // yay!
 });
 
-var echan = require('../models')
-var models = echan.init(mongoose)
+var echan = require('../models');
+var models = echan.init(mongoose);
 
 // create ephemeral
 var message = {
@@ -31,7 +31,8 @@ var new_message = new models.Ephemeral(message);
 
 new_message.save(function (err, new_message) {
 	console.log("Saved new message");
-	testGetNumSentEphemerals();
+ 	testNumDueEphemerals();		
+	//testGetNumSentEphemerals();
 	//echan.updateEmailSentFlag(models, new_message);
 });
 
@@ -40,7 +41,7 @@ function onSuccess(message) {
 }
 
 function onFailure(err) {
-  	console.log("test failed")
+  	console.log("test failed");
   	console.log(err);
 }
 
@@ -61,7 +62,17 @@ function testGetNumUnsentEphemerals() {
 }
 
 // Tests here
-
+function testNumDueEphemerals() {
+	echan.getEphemeralsDueForSending(models, function(ephemerals){
+		if(ephemerals.length == 1) {
+			console.log(ephemerals.length);
+			console.log("test get number of due ephemerals pass");
+		}
+		else {
+			console.log("expected 1 due ephemeral but actual: " + ephemerals.length);
+		}	
+	}, function(err) {console.log(err);});
+}
 
 
 
