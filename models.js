@@ -21,15 +21,22 @@ function GetEphemeral(db, itemId, onSuccess, onFailure) {
 
 // removes ephemeral, parameter - ephemeral
 function RemoveEphemeral(db, ephemeral) {
-    console.log(ephemeral);
     db.Ephemeral.remove({
         "_id": ephemeral._id
     }, function(err) {
         if (err) {
             console.log(err);
         } else {
-            console.log("successfully removed ephemeral");
+            console.log("Successfully removed Ephemeral.");
         }
+    });
+}
+
+function FindAndRemoveEphemeral(db, ephemeralId, callback) {
+    db.Ephemeral.findByIdAndRemove({
+        "_id": ephemeralId
+    }, function(ephemeral) {
+        callback(ephemeral);
     });
 }
 
@@ -40,7 +47,7 @@ function UpdateEmailSentFlag(db, ephemeral, onSuccess) {
         if (err) {
             console.log("error updating email sent flag");
             console.log(err);
-        } else if(!!onSuccess) {
+        } else if (!!onSuccess) {
             onSuccess(new_message);
         }
     });
@@ -119,3 +126,4 @@ exports.updateEmailSentFlag = UpdateEmailSentFlag;
 exports.getNumSentEphemerals = GetNumSentEphemerals;
 exports.getNumUnsentEphemerals = GetNumUnsentEphemerals;
 exports.getEphemeralsDueForSending = GetEphemeralsDueForSending;
+exports.findAndRemoveEphemeral = FindAndRemoveEphemeral;
