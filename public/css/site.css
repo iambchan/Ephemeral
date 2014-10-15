@@ -12,4 +12,8 @@ body {
     background-color: #7E8AA2;
 }
 
+a, p, h4, label{
+	font-family: 'Bilbo Swash Caps';
+}
+
 

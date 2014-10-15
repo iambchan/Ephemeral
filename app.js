@@ -73,6 +73,10 @@ app.post('/message', function(req, res) {
     res.redirect('/success');
 });
 
+app.get('/error', function(req, res) {
+    res.render('error');
+});
+
 app.get('/success', function(req, res) {
     res.render('success');
 });
@@ -97,6 +101,7 @@ app.get('/:message_id', function(req, res) {
     function onSuccess(ephemeral) {
         if (!ephemeral) {
             res.status(404);
+            res.redirect('/error');
         }
         res.render('ephemeral', ephemeral);
     }

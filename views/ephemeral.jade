@@ -1,14 +1,9 @@
 extend template
 block content
-  
-  if(!!content)
     p #{content}
     p Yours truly, 
     p #{from_user}
     br
-    a(href= 'http://ephemeral-messages.herokuapp.com/') Send an Ephemeral to someone special yourself!
-    img(src="tracking.px?message_id=#{_id}") 
-  else
-    p 404 Ephemeral not found :( 
-
+    a(href='/') Send an Ephemeral to someone special yourself!
+    img(src='tracking.px?message_id=#{_id}') 
 
