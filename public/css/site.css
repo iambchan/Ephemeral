@@ -5,13 +5,22 @@ h1 {
    margin-bottom: -15px;
 }
 
+h3 {
+  font-family: 'Bad Script';
+  font-weight: bolder;
+}
+
+.generic-content-style {
+  font-family: 'Bad Script';
+  font-size: large;
+}
 
 body {
         background-image: url('/public/images/norwegian_rose_@2X.png');
     }
 
-a, p, h4, label{
-    font-family: 'Bilbo Swash Caps';
+a, p, h4, label, span{
+    font-family: 'Bad Script';
 }
 
 .content-style{
