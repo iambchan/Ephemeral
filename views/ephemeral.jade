@@ -1,9 +1,10 @@
 extend template
 block content
-    p #{content}
-    p Yours truly, 
-    p #{from_user}
-    br
-    a(href='/') Send an Ephemeral to someone special yourself!
-    img(src='tracking.px?message_id=#{_id}') 
-
+    div(class='message-style')
+        p(class='content-style') #{content} 
+        p(class='content-style') Yours truly, 
+        p(class='content-style') #{from_user}
+        a(href='/')
+            span(class='glyphicon glyphicon-envelope')
+        a(href='/') Send an Ephemeral to someone special yourself!
+        img(src='tracking.px?message_id=#{_id}') 
