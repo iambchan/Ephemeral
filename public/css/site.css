@@ -7,13 +7,52 @@ h1 {
 
 
 body {
-    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
-    background-size: 100px 100px;
-    background-color: #7E8AA2;
-}
+        background-image: url('/public/images/norwegian_rose_@2X.png');
+    }
 
 a, p, h4, label{
-	font-family: 'Bilbo Swash Caps';
+    font-family: 'Bilbo Swash Caps';
+}
+
+.content-style{
+    font-family: 'Bad Script';
+    font-size: x-large;
+}
+
+.message-style{
+  padding: 50px;
+}
+
+span.glyphicon-envelope{
+    font-size: 5em;
+}
+
+.heading-style{
+    font-size: 7em;
+    text-align: center;
+    margin-bottom: -15px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.75);
+    font-family:'Bilbo Swash Caps';
+}
+
+.heading-div-style{
+  margin-bottom: -45px;
+}
+
+.heading-style:link {
+  text-decoration: none;
+  color: #428BCA;
+}
+
+.heading-style:hover {
+    text-decoration: none;
 }
 
 
+.heading-style:active {
+  text-decoration: 
+}
+
+.date-adder-style{
+  padding: 10px;
+}

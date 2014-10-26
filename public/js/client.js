@@ -10,13 +10,26 @@ function setTodaysDate() {
     return false;
 }
 
-function setAMonthDate() {
-    var myDate = new Date();
-    myDate.setDate(myDate.getDate() + 31);
-    $('#send_date').val(myDate.toDateInputValue());
+Date.prototype.addDays = function(days) {
+    var dat = new Date(this.valueOf());
+    dat.setDate(dat.getDate() + days);
+    return dat;
+};
+
+function addDays(numDays) {
+    var selectedDate = appState.currentDate;
+    appState.currentDate = selectedDate.addDays(numDays);
+    updateView();
     return false;
 }
 
+function updateView() {
+    $('#send_date').val(appState.currentDate.toDateInputValue());
+}
+
+var appState = {};
+
 $(document).ready(function() {
     $('#send_date').val(new Date().toDateInputValue());
+    appState.currentDate = new Date();
 });

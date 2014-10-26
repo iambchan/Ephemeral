@@ -5,7 +5,7 @@ block content
   form(action='/message', method='POST')
     div(class='form-group')
       label(for='recipient') Recipient Email Address
-      input(type='email', class='form-control', name='recipient', placeholder='Enter Email' required)
+      input(type='email', class='form-control', name='recipient', placeholder='Recipient Email Address' required)
     div(class='form-group')
       label(for='content') Message
       textarea(class='form-control', name='content', rows='3' required)
@@ -13,10 +13,11 @@ block content
       label(for='send_date') Send Date
       br
       input(type='date', name='send_date' id='send_date')
-      button(onclick='return setTodaysDate()') Today
-      button(onclick='return setAMonthDate()') A Month
+      span(class='date-adder-style' onclick='return addDays(31)') + month
+      span(class='date-adder-style' onclick='return addDays(1)') + day
+
     div(class='form-group')
       label(for='from_user') From
       br
       input(type='text', name='from_user')
-    button(type='submit',class='btn btn-default') Submit
+    button(type='submit',class='btn btn-default') Send

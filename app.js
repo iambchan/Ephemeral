@@ -94,6 +94,10 @@ app.get('/tracking.px', function(req, res) {
     res.redirect('/public/images/track.png');
 });
 
+app.get('/test', function(req, res) {
+  res.render('test');
+});
+
 app.get('/:message_id', function(req, res) {
     // get message from server/database
     var id = req.params.message_id;
