@@ -1,6 +1,6 @@
 {
-  "name": "hello-world",
-  "description": "hello world test app",
+  "name": "Ephemeral-messages",
+  "description": "Sending short and brief moments of time to anyone and anytime.",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
