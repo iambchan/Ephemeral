@@ -19,21 +19,30 @@ body {
         background-image: url('/public/images/norwegian_rose_@2X.png');
     }
 
-a, p, h4, label, span{
+.rice-paper-style {
+        background-image: url('/public/images/scroll.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-color: transparent;
+    }
+
+a, p, h4, label, span {
     font-family: 'Bad Script';
+}
+
+.btn-default {
+  font-family: 'Bad Script';
 }
 
 .content-style{
     font-family: 'Bad Script';
-    font-size: x-large;
+    font-size: medium;
+    color: dimgray;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.75);
 }
 
 .message-style{
-  padding: 50px;
-}
-
-span.glyphicon-envelope{
-    font-size: 5em;
+  padding-top: 65px;
 }
 
 .heading-style{
@@ -42,6 +51,8 @@ span.glyphicon-envelope{
     margin-bottom: -15px;
     text-shadow: 0 1px 0 rgba(255,255,255,0.75);
     font-family:'Bilbo Swash Caps';
+    color: slategray;
+    padding-left: 20%;
 }
 
 .heading-div-style{
@@ -64,4 +75,16 @@ span.glyphicon-envelope{
 
 .date-adder-style{
   padding: 10px;
+}
+
+.transparent-input-style{
+  background-color: rgba(255,255,255,0.4);
+  font-family: 'Bad Script';
+}
+
+.form-style {
+  padding-left: 135px;
+  padding-right: 100px;
+  padding-bottom: 70px;
+  border: none;
 }

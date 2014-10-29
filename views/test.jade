@@ -1,0 +1,23 @@
+extend template
+block content
+  br
+  form(action='/message', method='POST')
+    div(class='form-group')
+      label(for='to_user') Dear, 
+      br
+      input(type='text', class='transparent-input-style', name='to_user')
+    div(class='form-group')
+      textarea(class='form-control transparent-input-style', name='content', placeholder='Type your message here.' rows='3' required)
+    div(class='form-group')
+      label(for='from_user') Yours truly, 
+      br
+      input(type='text', class='transparent-input-style', name='from_user')
+    div(class='form-group')
+      input(type='email', class='form-control transparent-input-style', name='recipient', placeholder='Recipient email address' required)
+    div(class='form-group')
+      label(for='send_date') Send Date
+      br
+      input(type='date', class='transparent-input-style', name='send_date' id='send_date')
+      span(class='date-adder-style' onclick='return addDays(31)') + month
+      span(class='date-adder-style' onclick='return addDays(1)') + day
+    button(type='submit',class='btn btn-default') Send
