@@ -5,11 +5,6 @@ Date.prototype.toDateInputValue = (function() {
     return local.toJSON().slice(0, 10);
 });
 
-function setTodaysDate() {
-    $('#send_date').val(new Date().toDateInputValue());
-    return false;
-}
-
 Date.prototype.addDays = function(days) {
     var dat = new Date(this.valueOf());
     dat.setDate(dat.getDate() + days);
@@ -27,9 +22,20 @@ function updateView() {
     $('#send_date').val(appState.currentDate.toDateInputValue());
 }
 
+function setTodaysDate() {
+    appState.currentDate = new Date();
+    updateView();
+    return false;
+}
+
 var appState = {};
 
 $(document).ready(function() {
-    $('#send_date').val(new Date().toDateInputValue());
-    appState.currentDate = new Date();
+    setTodaysDate();
+
+    // Update app state whenever user changes the date in the input
+    $('#send_date').blur(function(e) {
+        console.log($('#send_date').val());
+        appState.currentDate = new Date($('#send_date').val());
+    });
 });

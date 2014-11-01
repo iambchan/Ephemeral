@@ -16,7 +16,8 @@ block content
     div(class='form-group')
       label(for='send_date') Send Date
       br
-      input(type='date', class='form-control transparent-input-style' name='send_date' id='send_date')
+      input(type='date' class='transparent-input-style' name='send_date' id='send_date')
       span(class='date-adder-style' onclick='return addDays(31)') + month
       span(class='date-adder-style' onclick='return addDays(1)') + day
+      span(class='date-adder-style' onclick='setTodaysDate()') reset
     button(type='submit',class='btn btn-default') Send
