@@ -1,7 +1,9 @@
 var email = require('./email.js');
 var schedule = require("node-schedule");
 
+// Intialize the email scheduler which checks the database and sends email every minute
 exports.init = function(ephemeraldb, models) {
+    // Defaults to sending email every minute
     var rule = new schedule.RecurrenceRule();
 
     function onSuccess(ephemerals) {
@@ -11,7 +13,7 @@ exports.init = function(ephemeraldb, models) {
             if (ephemeral.email_sent) {
                 return;
             }
-            email.sendMail(ephemeraldb, models, ephemeral);
+            email.sendMail(ephemeraldb, models, ephemeral, true);
         });
     }
 
@@ -19,7 +21,7 @@ exports.init = function(ephemeraldb, models) {
         console.log(err);
     }
     var j = schedule.scheduleJob(rule, function() {
-        console.log("running email scheduler");
+        console.log("Running email scheduler");
         ephemeraldb.getEphemeralsDueForSending(models, onSuccess, onFailure);
     });
 };
