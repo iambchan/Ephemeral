@@ -32,12 +32,13 @@ This application began in 2013 December with @rymndhng and completed by me this 
 Start the application locally by using the command
 ```bash
 node app.js
-```bash
+```
 
 ##Connecting to mongo db locally
 ```bash
 sudo mongod
-```bash
+```
+
 ###Run mongo queries
 ```bash
 ☁  ~  mongo
@@ -46,6 +47,6 @@ connecting to: test
 > use test
 switched to db test
 > db.ephemerals.find()
-```bash
+```
 
 
