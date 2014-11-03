@@ -45,11 +45,11 @@ app.use(function(req, res, next) {
 });
 
 app.use('/public', express.static(__dirname + '/public'));
-
 function onFailure(err) {
     console.log(err);
 }
 
+// Main page with the form
 app.get('/', function(req, res) {
     // Get the number of sent and unsent ephemerals in the server for stats 
     res.render('index', {});
@@ -85,11 +85,11 @@ app.get('/ephemeral_stats', function(req, res) {
     res.render('ephemeralStats');
 });
 
-// tracking pixel to delete when the page has loaded! 
+// Tracking pixel to delete ephemeral when the page has loaded! 
 app.get('/tracking.px', function(req, res) {
     var _id = new mongoose.Types.ObjectId(req.query.message_id);
     ephemeralDB.findAndRemoveEphemeral(models, _id, function(ephemeral) {
-        console.log("Ephemeral  deleted: " + ephemeral);
+        console.log("Ephemeral deleted: " + ephemeral);
     });
     res.redirect('/public/images/track.png');
 });
@@ -98,8 +98,8 @@ app.get('/test', function(req, res) {
   res.render('test');
 });
 
+// Get and display message from server/database 
 app.get('/:message_id', function(req, res) {
-    // get message from server/database
     var id = req.params.message_id;
 
     function onSuccess(ephemeral) {
@@ -115,7 +115,6 @@ app.get('/:message_id', function(req, res) {
     }
     ephemeralDB.getEphemeral(models, id, onSuccess, onFailure);
 });
-
 
 app.listen(PORT);
 console.log('Listening on port ' + PORT);
