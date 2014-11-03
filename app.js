@@ -23,7 +23,8 @@ require('./scheduler').init(ephemeralDB, models);
 // Configure express.js
 var app = express();
 
-app.use(express.bodyParser());
+app.use(express.json());
+app.use(express.urlencoded());
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 

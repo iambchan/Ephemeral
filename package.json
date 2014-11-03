@@ -1,14 +1,14 @@
 {
   "name": "Ephemeral-messages",
   "description": "Sending short and brief moments of time to anyone and anytime.",
-  "version": "0.0.1",
+  "version": "1.0",
   "private": true,
   "dependencies": {
-    "express": "3.x",
-    "jade": "*",
-    "mongoose": "*",
-    "node-schedule": "*",
-    "nodemailer": "1.0",
+    "express": "^3.18.2",
+    "jade": "^1.7.0",
+    "mongoose": "^3.8.18",
+    "node-schedule": "^0.1.13",
+    "nodemailer": "^1.0",
     "q": "^1.0.1"
   }
 }
