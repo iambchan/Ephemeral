@@ -9,6 +9,7 @@
     "mongoose": "^3.8.18",
     "node-schedule": "^0.1.13",
     "nodemailer": "^1.0",
+    "http-proxy": "*",
     "q": "^1.0.1"
   }
 }
