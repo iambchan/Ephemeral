@@ -25,4 +25,3 @@ app.use(function(req,res) {
 
 app.listen(80);
 console.log('Frontend server listening on port 80.');
-var express = require('express');
