@@ -1,6 +1,6 @@
 extend template
 block content
-  h4 Send a message to yourself, a friend, or loved one in the future and we'll send you the message in the specified time - whether it be a month or year.
+  h4  Some of the best things in life lasts only for a short moment in time. Messages sent can only be read once.
   br
   form(action='/message', method='POST')
     div(class='form-group')
@@ -21,3 +21,5 @@ block content
       span(class='date-adder-style' onclick='return addDays(1)') + day
       span(class='date-adder-style' onclick='setTodaysDate()') reset
     button(type='submit',class='btn btn-default') Send
+
+

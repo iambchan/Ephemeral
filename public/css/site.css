@@ -87,3 +87,7 @@ a, p, h4, label, span {
   padding-bottom: 70px;
   border: none;
 }
+
+.github-logo-style {
+  height: 30px;
+}
