@@ -100,14 +100,8 @@ function UpdateCounts(db, onSuccess, onFailure) {
         { name: "totalMessages" },
         { $inc: { value: 1} },
         function(err, count, results) {
-            if(err) {
-                onFailure(err);
-            } else {
-                onSuccess(results);
-                //var blah = typeOf results;
-                console.log(results.value);
-                console.log("Total message count updated " + results);
-            }
+            if(err) { onFailure(err); } 
+            else { onSuccess(results); }
         });
 }
 
@@ -125,11 +119,8 @@ function UpdateCountsWithUpdatedValue(db, onSuccess, onFailure) {
 // Gets the total messages sent
 function GetTotalMessageCount(db, onSuccess, onFailure) {
     db.Globals.find({name: "totalMessages"}, function(err, results){
-        if(err) {
-            onFailure(err);
-        } else {
-            onSuccess(results);
-        }
+        if(err) { onFailure(err); } 
+        else { onSuccess(results); }
     });
 }
 
@@ -162,7 +153,6 @@ exports.init = function(mongoose) {
     return {
         Ephemeral: mongoose.model('Ephemeral', ephemeralSchema),
         Globals: mongoose.model('Globals', globalsSchema)
-        // readEphemeral: ReadEphemeral.bind(null, mongoose)
     };
 };
 
