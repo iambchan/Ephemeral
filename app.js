@@ -56,6 +56,14 @@ app.get('/', function(req, res) {
     res.render('index', {});
 });
 
+var onSuccess = function() {
+    console.log("success!");
+};
+
+var onFailure = function() {
+    console.log("failure!");
+};
+
 app.post('/message', function(req, res) {
     console.log(req.params);
 
@@ -70,6 +78,10 @@ app.post('/message', function(req, res) {
     new_message.save(function(err, new_message) {
         if (err) // TODO handle the error
             console.log("error saving message to db");
+        else {
+            // update total messages count
+            ephemeralDB.updateCounts(models, onSuccess, onFailure);
+        }
     });
     res.redirect('/success');
 });

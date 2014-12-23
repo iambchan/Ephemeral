@@ -94,6 +94,46 @@ function GetEphemeralsDueForSending(db, onSuccess, onFailure) {
     });
 }
 
+// increments totalMessages count but doesn't return the updated count
+function UpdateCounts(db, onSuccess, onFailure) {
+    db.Globals.update(
+        { name: "totalMessages" },
+        { $inc: { value: 1} },
+        function(err, count, results) {
+            if(err) {
+                onFailure(err);
+            } else {
+                onSuccess(results);
+                //var blah = typeOf results;
+                console.log(results.value);
+                console.log("Total message count updated " + results);
+            }
+        });
+}
+
+// Returns the actual object with updated totalMessages count.
+function UpdateCountsWithUpdatedValue(db, onSuccess, onFailure) {
+    var query = { name: 'totalMessages' };
+    var update = { $inc:{value:1} };
+    var options = {};
+    db.Globals.findOneAndUpdate(query, update, options, function (err, results) {
+        if (err) { console.log(err); }
+        else { console.log(results); }
+    });
+}
+
+// Gets the total messages sent
+function GetTotalMessageCount(db, onSuccess, onFailure) {
+    db.Globals.find({name: "totalMessages"}, function(err, results){
+        if(err) {
+            onFailure(err);
+        } else {
+            onSuccess(results);
+        }
+    });
+}
+
+// Defining the schema
 exports.init = function(mongoose) {
     var ephemeralSchema = mongoose.Schema({
         message_id: String,
@@ -113,12 +153,22 @@ exports.init = function(mongoose) {
         }
     });
 
+    // Collection of global counts 
+    var globalsSchema = mongoose.Schema({
+        name: String,
+        value: Number,
+    });
+
     return {
         Ephemeral: mongoose.model('Ephemeral', ephemeralSchema),
+        Globals: mongoose.model('Globals', globalsSchema)
         // readEphemeral: ReadEphemeral.bind(null, mongoose)
     };
 };
 
+// Exports
+exports.getTotalMessageCount = GetTotalMessageCount;
+exports.updateCounts = UpdateCountsWithUpdatedValue;
 exports.readEphemeral = ReadEphemeral;
 exports.getEphemeral = GetEphemeral;
 exports.removeEphemeral = RemoveEphemeral;
