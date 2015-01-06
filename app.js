@@ -32,14 +32,17 @@ app.set('view engine', 'jade');
 app.use(function(req, res, next) {
     var numSent = Q.defer();
     var numUnsent = Q.defer();
+    var totalNumMsg = Q.defer();
 
     ephemeralDB.getNumSentEphemerals(models, numSent.resolve);
     ephemeralDB.getNumUnsentEphemerals(models, numUnsent.resolve);
+    ephemeralDB.getTotalMessageCount(models, totalNumMsg.resolve);
 
-    Q.all([numSent.promise, numUnsent.promise]).then(function(counts) {
+    Q.all([numSent.promise, numUnsent.promise, totalNumMsg.promise]).then(function(counts) {
         app.locals.counts = {
             sent: counts[0],
-            unsent: counts[1]
+            unsent: counts[1],
+            totalMsg: counts[2]
         };
         next();
     });

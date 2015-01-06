@@ -99,7 +99,7 @@ function UpdateCountsWithUpdatedValue(db, onSuccess, onFailure) {
 function GetTotalMessageCount(db, onSuccess, onFailure) {
     db.Globals.find({name: "totalMessages"}, function(err, results){
         if(err) { onFailure(err); } 
-        else { onSuccess(results); }
+        else { onSuccess(results[0].value); }
     });
 }
 
