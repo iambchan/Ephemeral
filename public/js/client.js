@@ -32,10 +32,13 @@ var appState = {};
 
 $(document).ready(function() {
     setTodaysDate();
+    // Set the timezone offset value for server to use
+    $('#timezone_offset').val(new Date().getTimezoneOffset()); 
 
     // Update app state whenever user changes the date in the input
     $('#send_date').blur(function(e) {
-        console.log($('#send_date').val());
         appState.currentDate = new Date($('#send_date').val());
     });
 });
+
+

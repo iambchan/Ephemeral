@@ -68,12 +68,14 @@ var onFailure = function() {
 };
 
 app.post('/message', function(req, res) {
-    console.log(req.params);
+    // Need to create new date Object based on user's current time zone
+    var d = new Date(req.body.send_date);
+    d.setUTCMinutes(req.body.timezone_offset);
 
     var message = {
         "content": req.body.content,
         "recipient": req.body.recipient,
-        "send_date": req.body.send_date,
+        "send_date": d.toJSON(),
         "from_user": req.body.from_user
     };
 
