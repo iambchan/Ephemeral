@@ -1,3 +1,17 @@
+function AddEphemeral(db, ephemeral, onSuccess, onFailure) {
+    // Save document to db
+    var new_message = db.Ephemeral(ephemeral);
+    new_message.save(function(err, new_message) {
+        if (err) { console.log("error saving message to db"); }
+        else {
+            // update total messages count
+            console.log("Added ephemeral successfully");
+            console.log(new_message);
+            UpdateCountsWithUpdatedValue(db, onSuccess, onFailure);
+        }
+    });
+}
+
 function ReadEphemeral(db, itemId, onSuccess, onFailure) {
     db.Ephemeral.findById(itemId, function(err, ephemeral) {
         if (err) { onFailure(err); }
@@ -17,9 +31,7 @@ function GetEphemeral(db, itemId, onSuccess, onFailure) {
 
 function FindAndRemoveEphemeral(db, ephemeralId, onSuccess) {
     db.Ephemeral.findByIdAndRemove(
-        { "_id": ephemeralId }, 
-        function(ephemeral) { onSuccess(ephemeral); }
-    );
+        { "_id": ephemeralId }, onSuccess );
 }
 
 function UpdateEmailSentFlag(db, ephemeral, onSuccess) {
@@ -136,6 +148,7 @@ exports.init = function(mongoose) {
 };
 
 // Exports
+exports.addEphemeral = AddEphemeral;
 exports.getTotalMessageCount = GetTotalMessageCount;
 exports.updateCounts = UpdateCountsWithUpdatedValue;
 exports.readEphemeral = ReadEphemeral;

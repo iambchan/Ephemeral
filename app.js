@@ -55,41 +55,17 @@ function onFailure(err) {
 
 // Main page with the form
 app.get('/', function(req, res) {
-    // Get the number of sent and unsent ephemerals in the server for stats 
     res.render('index', {});
 });
 
-var onSuccess = function() {
-    console.log("success!");
+// Generic onSuccess and onFailure functions
+var onSuccess = function(result) {
+    console.log("Success! " + result);
 };
 
-var onFailure = function() {
-    console.log("failure!");
+var onFailure = function(result) {
+    console.log("Error! " + result);
 };
-
-app.post('/message', function(req, res) {
-    // Need to create new date Object based on user's current time zone
-    var d = new Date(req.body.send_date);
-    d.setUTCMinutes(req.body.timezone_offset);
-
-    var message = {
-        "content": req.body.content,
-        "recipient": req.body.recipient,
-        "send_date": d.toJSON(),
-        "from_user": req.body.from_user
-    };
-
-    var new_message = new models.Ephemeral(message);
-    new_message.save(function(err, new_message) {
-        if (err) // TODO handle the error
-            console.log("error saving message to db");
-        else {
-            // update total messages count
-            ephemeralDB.updateCounts(models, onSuccess, onFailure);
-        }
-    });
-    res.redirect('/success');
-});
 
 app.get('/error', function(req, res) {
     res.render('error');
@@ -103,35 +79,43 @@ app.get('/ephemeral_stats', function(req, res) {
     res.render('ephemeralStats');
 });
 
+// Add an Ephemeral
+app.post('/message', function(req, res) {
+    // Need to create new date Object based on user's current time zone
+    var d = new Date(req.body.send_date);
+    d.setUTCMinutes(req.body.timezone_offset);
+
+    var message = {
+        "content": req.body.content,
+        "recipient": req.body.recipient,
+        "send_date": d.toJSON(),
+        "from_user": req.body.from_user
+    };
+
+    ephemeralDB.addEphemeral(models, message, onSuccess, onFailure); 
+    res.redirect('/success');
+});
+
 // Tracking pixel to delete ephemeral when the page has loaded! 
 app.get('/tracking.px', function(req, res) {
     var _id = new mongoose.Types.ObjectId(req.query.message_id);
-    ephemeralDB.findAndRemoveEphemeral(models, _id, function(ephemeral) {
-        console.log("Ephemeral deleted: " + ephemeral);
-    });
+    ephemeralDB.findAndRemoveEphemeral(models, _id, onSuccess("Ephemeral Deleted"));
     res.redirect('/public/images/track.png');
-});
-
-app.get('/test', function(req, res) {
-  res.render('test');
 });
 
 // Get and display message from server/database 
 app.get('/:message_id', function(req, res) {
     var id = req.params.message_id;
 
-    function onSuccess(ephemeral) {
+    // Redirect user to error page if the ephemeral doesn't exist
+    function onFoundSuccess(ephemeral) {
         if (!ephemeral) {
             res.status(404);
             res.redirect('/error');
         }
         res.render('ephemeral', ephemeral);
     }
-
-    function onFailure(err) {
-        console.log(err);
-    }
-    ephemeralDB.getEphemeral(models, id, onSuccess, onFailure);
+    ephemeralDB.getEphemeral(models, id, onFoundSuccess, onFailure);
 });
 
 app.listen(PORT);
