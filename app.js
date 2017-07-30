@@ -3,8 +3,7 @@ var mongoose = require('mongoose');
 var Q = require('q');
 
 //configure dependencies
-var MONGO_URL = process.env.MONGOLAB_URI ||
-    process.env.MONGOHQ_URL ||
+var MONGO_URL = process.env.MONGODB_URI ||
     'mongodb://localhost/test';
 
 var PORT = process.env.PORT || 3000;
@@ -49,9 +48,6 @@ app.use(function(req, res, next) {
 });
 
 app.use('/public', express.static(__dirname + '/public'));
-function onFailure(err) {
-    console.log(err);
-}
 
 // Main page with the form
 app.get('/', function(req, res) {
