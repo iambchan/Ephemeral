@@ -1,4 +1,4 @@
-#Ephemeral
+# Ephemeral
 
 > Ephemeral: 
 > _adjective_
@@ -12,7 +12,7 @@ This app was made for the purpose of creating __messages that lasts for a short 
 
 Access the heroku hosted app [here](http://ephemeral-messages.herokuapp.com).
 
-#Technical
+# Technical
 
 Ephemeral is a node web application that uses the following:
 
@@ -28,13 +28,13 @@ Ephemeral is a node web application that uses the following:
 The purpose of this application is an introduction to learn web development using the nodejs framework.
 This application began in 2013 December with @rymndhng and completed by me this fall of October 2014. 
 
-#Deployment instructions
+# Deployment instructions
 Start the application locally by using the command
 ```bash
 node app.js
 ```
 
-##Connecting to mongo db locally
+## Connecting to mongo db locally
 ```bash
 sudo mongod
 ```
